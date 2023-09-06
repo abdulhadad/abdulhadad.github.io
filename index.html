@@ -1,1 +1,14 @@
-Hello world
+<script>
+  const params = new URLSearchParams(document.location.search)
+  const go = params.get("go")
+
+  const data = {
+    github: { name: "gtihub", link: "https://github.com/abdulhadad" },
+    youtube: { name: "youtube", link: "https://www.youtube.com/channel/UCsTOSVq4-lUMZACwDFC8fiw" }
+  }
+
+  if (go) {
+    window.location.replace(data[go].link)
+  }
+  
+</script>
